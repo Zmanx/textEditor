@@ -39,10 +39,9 @@ void enableRawMode() {
 
 
 int main() {
+
+
     enableRawMode();
-
-
-
     while(1) {
         char c = '\0';
         if (read(STDIN_FILENO, &c,1)==-1 && errno != EAGAIN) die("read");
@@ -57,7 +56,7 @@ int main() {
         if (c == 'q') break;
     }
 
-
+    printf("hello");
     return 0;
 }
 
